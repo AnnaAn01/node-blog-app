@@ -1,12 +1,56 @@
+$lightPurple: #e8e2f6;
+
 .app {
   .container {
     // Login and register
 
     .auth {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      background-color: $lightPurple;
+
+      h1 {
+        font-size: 20px;
+        color: rgb(98, 0, 128);
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color: white;
+        width: 200px;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+
+        button {
+          padding: 10px;
+          border: none;
+          background-color: rgb(98, 0, 128);
+          color: white;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 14px;
+          text-align: center;
+          color: red;
+        }
+
+        span {
+          font-size: 14px;
+          text-align: center;
+        }
+      }
     }
   }
 }
