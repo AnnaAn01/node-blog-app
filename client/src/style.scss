@@ -1,4 +1,12 @@
 .app {
   .container {
+    // Login and register
+
+    .auth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
   }
 }
