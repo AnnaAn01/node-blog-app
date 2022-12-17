@@ -27,7 +27,7 @@ const Home = () => {
         },
         {
             id: 2,
-            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 3.",
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 4.",
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             img: "https://images.pexels.com/photos/5806696/pexels-photo-5806696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 
