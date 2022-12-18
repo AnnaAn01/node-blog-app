@@ -22,8 +22,7 @@ const Single = () => {
                             <FaEdit className='edit-icon' />
                         </Link>
                         <RiDeleteBinLine className='delete-icon' />
-                        {/*<img src={Edit} alt="" />
-    <img src={Delete} alt="" />*/}
+
                     </div>
                 </div>
             </div>
