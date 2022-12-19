@@ -25,6 +25,15 @@ const Single = () => {
 
                     </div>
                 </div>
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cum modi quo et quam autem velit, perspiciatis possimus ut similique mollitia rerum molestiae adipisci eos eveniet tempore rem repellat iusto architecto sit voluptatum vero. Ex, architecto quas! Impedit sapiente, nulla velit atque incidunt modi voluptate ducimus voluptas illo obcaecati nobis, eveniet, repellat quam inventore. Minus enim, consequatur similique voluptate nulla iusto quas! Quos dicta quia illo adipisci exercitationem aperiam tempore, provident deleniti dolores libero magni commodi sed corrupti perferendis eaque laudantium culpa tenetur vel est explicabo! Facilis at explicabo aliquid reiciendis voluptatibus nihil a assumenda ipsam. Qui ipsam cumque dolor.
+                    <br />
+                    <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cum modi quo et quam autem velit, perspiciatis possimus ut similique mollitia rerum molestiae adipisci eos eveniet tempore rem repellat iusto architecto sit voluptatum vero. Ex, architecto quas! Impedit sapiente, nulla velit atque incidunt modi voluptate ducimus voluptas illo obcaecati nobis, eveniet, repellat quam inventore. Minus enim, consequatur similique voluptate nulla iusto quas! Quos dicta quia illo adipisci exercitationem aperiam tempore, provident deleniti dolores libero magni commodi sed corrupti perferendis eaque laudantium culpa tenetur vel est explicabo! Facilis at explicabo aliquid reiciendis voluptatibus nihil a assumenda ipsam. Qui ipsam cumque dolor.
+                    <br />
+                    <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cum modi quo et quam autem velit, perspiciatis possimus ut similique mollitia rerum molestiae adipisci eos eveniet tempore rem repellat iusto architecto sit voluptatum vero. Ex, architecto quas! Impedit sapiente, nulla velit atque incidunt modi voluptate ducimus voluptas illo obcaecati nobis, eveniet, repellat quam inventore.
+                </p>
             </div>
             <div className="menu">m</div>
         </div>

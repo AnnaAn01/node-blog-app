@@ -237,7 +237,7 @@ $lightPurple: #e8e2f6;
         display: flex;
 
         gap: 5px;
-        // background-color: red;
+
         justify-content: flex-end;
         align-items: flex-end;
         text-align: end;
@@ -254,6 +254,11 @@ $lightPurple: #e8e2f6;
 
       .menu {
         flex: 2;
+      }
+
+      h1 {
+        font-size: 42px;
+        color: #333;
       }
     }
   }
