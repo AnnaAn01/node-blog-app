@@ -4,6 +4,7 @@ import Delete from "../img/delete.png";
 import { FaEdit } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import Menu from '../components/Menu';
 
 
 const Single = () => {
@@ -35,7 +36,7 @@ const Single = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cum modi quo et quam autem velit, perspiciatis possimus ut similique mollitia rerum molestiae adipisci eos eveniet tempore rem repellat iusto architecto sit voluptatum vero. Ex, architecto quas! Impedit sapiente, nulla velit atque incidunt modi voluptate ducimus voluptas illo obcaecati nobis, eveniet, repellat quam inventore.
                 </p>
             </div>
-            <div className="menu">m</div>
+            <Menu />
         </div>
     )
 }
