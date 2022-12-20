@@ -277,6 +277,25 @@ $lightPurple: #e8e2f6;
             height: 200px;
             object-fit: cover;
           }
+
+          h2 {
+            color: #555;
+          }
+
+          button {
+            width: max-content;
+            padding: 7.5px 15px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid rgb(98, 0, 128);
+            color: rgb(98, 0, 128);
+
+            &:hover {
+              border: 1px solid white;
+              background-color: $lightPurple;
+              color: black;
+            }
+          }
         }
       }
 
@@ -288,6 +307,28 @@ $lightPurple: #e8e2f6;
       p {
         text-align: justify;
         line-height: 30px;
+      }
+    }
+
+    // Write
+
+    .add {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }
