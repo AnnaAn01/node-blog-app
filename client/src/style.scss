@@ -311,16 +311,21 @@ $lightPurple: #e8e2f6;
     // Write
 
     .add {
+      display: flex;
       margin-top: 20px;
       display: flex;
       gap: 20px;
-      // position: relative;
+      // background-color: yellow;
+      position: relative;
+      height: auto;
 
       .content {
         flex: 5;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        position: relative;
+        height: 100%;
 
         input {
           padding: 10px;
@@ -328,7 +333,7 @@ $lightPurple: #e8e2f6;
         }
 
         .editorContainer {
-          height: 300px;
+          height: 240px;
           overflow: none;
 
           .editor {
@@ -343,7 +348,7 @@ $lightPurple: #e8e2f6;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        background-color: red;
+        // background-color: red;
         position: relative;
         height: 100%;
 
@@ -356,6 +361,8 @@ $lightPurple: #e8e2f6;
           justify-content: space-between;
           font-size: 12px;
           color: #555;
+          height: 100%;
+          // background-color: green;
 
           h1 {
             font-size: 20px;
