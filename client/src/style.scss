@@ -217,6 +217,7 @@ $lightPurple: #e8e2f6;
           align-items: center;
           gap: 10px;
           font-size: 14px;
+          padding-top: 30px;
 
           img {
             width: 50px;
@@ -333,7 +334,8 @@ $lightPurple: #e8e2f6;
         }
 
         .editorContainer {
-          height: 240px;
+          height: 330px;
+          min-height: 100%;
           overflow: none;
 
           .editor {
@@ -368,6 +370,10 @@ $lightPurple: #e8e2f6;
             font-size: 20px;
           }
 
+          span {
+            padding-bottom: 10px;
+          }
+
           .file {
             text-decoration: underline;
             cursor: pointer;
@@ -376,6 +382,7 @@ $lightPurple: #e8e2f6;
           .buttons {
             display: flex;
             justify-content: space-between;
+            padding-top: 10px;
             // background-color: red;
 
             :first-child {
@@ -399,6 +406,7 @@ $lightPurple: #e8e2f6;
             align-items: center;
             gap: 2px;
             color: rgb(98, 0, 128);
+            padding-bottom: 10px;
           }
         }
       }
