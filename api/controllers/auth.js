@@ -32,16 +32,16 @@ export const login = (req, res) => {
   db.query(q, [req, body, username], (err, data) => {
     if (err) return res.json(err);
     if (data.length === 0) return res.status(404).json("User not found!");
-  });
 
-  // CHECK PASSWORD
-  // data retuns an array, so we'll use data[0] to select the first item, which is our user
-  const isPasswordCorrect = bcrypt.compareSync(
-    req.body.password,
-    data[0].password
-  );
-  if (!isPasswordCorrect)
-    return res.status(400).json("Wrong username or password!");
+    // CHECK PASSWORD
+    // data retuns an array, so we'll use data[0] to select the first item, which is our user
+    const isPasswordCorrect = bcrypt.compareSync(
+      req.body.password,
+      data[0].password
+    );
+    if (!isPasswordCorrect)
+      return res.status(400).json("Wrong username or password!");
+  });
 };
 
 export const logout = (req, res) => {};
