@@ -3,7 +3,7 @@ import Edit from "../img/edit.png";
 import Delete from "../img/delete.png";
 import { FaEdit } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Menu from '../components/Menu';
 import axios from "axios";
 import moment from "moment";
@@ -15,7 +15,7 @@ const Single = () => {
     const [post, setPost] = useState({});
 
     const location = useLocation();
-
+    const navigate = useNavigate();
 
     // we split the address with the /, but we have 2 /, so there are 3 items after the split. And we need the last part, the id number
     const postId = location.pathname.split("/")[2];
@@ -35,6 +35,15 @@ const Single = () => {
         fetchData()
     }, [postId]);
 
+    const handleDelete = async () => {
+        try {
+            await axios.delete(`/posts/${postId}`);
+            navigate("/");
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     return (
         <div className='single'>
             <div className="content">
@@ -47,15 +56,15 @@ const Single = () => {
                         <p>Posted {moment(post.date).fromNow()}</p>
                     </div>
                     {/* if currentuser equals post.username show me this div */}
-                    {currentUser.username === post.username && <div className="edit">
-                        <Link className='link edit' to={`/write?edit=2`}>
-                            <FaEdit className='edit-icon' />
-                        </Link>
-                        <RiDeleteBinLine className='delete-icon' />
-
-                    </div>}
+                    {currentUser.username === post.username &&
+                        <div className="edit">
+                            <Link className='link edit' to={`/write?edit=2`}>
+                                <FaEdit className='edit-icon' />
+                            </Link>
+                            <RiDeleteBinLine className='delete-icon' onClick={handleDelete} />
+                        </div>}
                 </div>
-                <h1>{post.title} </h1>
+                <h1>{post.title}</h1>
                 {/* we won't use a p tag for the desc because we are using rich editor and it already has a p tag */}
                 {post.desc}
             </div>
