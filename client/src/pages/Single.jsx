@@ -68,7 +68,7 @@ const Single = () => {
                 {/* we won't use a p tag for the desc because we are using rich editor and it already has a p tag */}
                 {post.desc}
             </div>
-            <Menu />
+            <Menu cat={post.cat} />
         </div>
     )
 }
