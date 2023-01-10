@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Edit from "../img/edit.png";
-import Delete from "../img/delete.png";
 import { FaEdit } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
