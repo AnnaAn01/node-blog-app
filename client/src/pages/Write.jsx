@@ -4,6 +4,8 @@ import 'react-quill/dist/quill.snow.css';
 
 const Write = () => {
     const [value, setValue] = useState('');
+    const [title, setTitle] = useState('');
+    const [img, setImg] = useState(null);
 
     return (
         <div className='add'>
