@@ -56,7 +56,7 @@ const Single = () => {
                     {/* if currentuser equals post.username show me this div */}
                     {currentUser.username === post.username &&
                         <div className="edit">
-                            <Link className='link edit' to={`/write?edit=2`}>
+                            <Link className='link edit' to={`/write?edit=2`} state={post}>
                                 <FaEdit className='edit-icon' />
                             </Link>
                             <RiDeleteBinLine className='delete-icon' onClick={handleDelete} />
