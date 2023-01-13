@@ -7,10 +7,6 @@ import multer from "multer";
 
 const app = express();
 
-// app.get("/test", (req, res) => {
-//   res.json("It works");
-// });
-
 app.use(express.json());
 app.use(cookieParser());
 
