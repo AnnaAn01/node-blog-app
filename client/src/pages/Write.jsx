@@ -3,6 +3,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
+import moment from "moment";
 
 const Write = () => {
     const state = useLocation().state;
@@ -30,6 +31,13 @@ const Write = () => {
         const imgUrl = upload();
 
         try {
+            // if there is a state, it means it's an update page
+            state ? await axios.put(`/posts/${state.id}`, {
+                title, desc: value, cat, img: file ? imgUrl : ""
+            }) : await axios.post(`/posts/`, {
+                title, desc: value, cat, img: file ? imgUrl : "", date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss")
+            });
+
 
         } catch (err) {
 

@@ -20,7 +20,7 @@ export const getPosts = (req, res) => {
 export const getPost = (req, res) => {
   // from users u - his u is a shortcut representing the users, p for posts
   const q =
-    "SELECT `username`, `title`, `desc`, p.img, u.img AS userImg, `cat`, `date` FROM users u JOIN posts p ON u.id=p.uid WHERE p.id=?";
+    "SELECT p.id, `username`, `title`, `desc`, p.img, u.img AS userImg, `cat`, `date` FROM users u JOIN posts p ON u.id=p.uid WHERE p.id=?";
   // params is the /:id this id in the url
   db.query(q, [req.params.id], (err, data) => {
     if (err) return res.status(500).json(err);
