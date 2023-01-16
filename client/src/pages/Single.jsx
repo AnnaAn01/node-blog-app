@@ -42,11 +42,16 @@ const Single = () => {
         }
     }
 
+    const getText = (html) => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        return doc.body.textContent;
+    }
+
     return (
         <div className='single'>
             <div className="content">
                 {/*we added the ? after post?. so that if it's loading, it doesn't give us an error */}
-                <img src={post?.img} alt="" />
+                <img src={`../upload/${post?.img}`} alt="" />
                 <div className="user">
                     {post.userImg && <img src={post.userImg} alt="" />}
                     <div className="info">
@@ -64,7 +69,7 @@ const Single = () => {
                 </div>
                 <h1>{post.title}</h1>
                 {/* we won't use a p tag for the desc because we are using rich editor and it already has a p tag */}
-                {post.desc}
+                {getText(post.desc)}
             </div>
             <Menu cat={post.cat} />
         </div>

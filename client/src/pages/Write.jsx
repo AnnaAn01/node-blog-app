@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from "axios";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import moment from "moment";
 
 const Write = () => {
@@ -12,6 +12,7 @@ const Write = () => {
     const [title, setTitle] = useState(state?.desc || '');
     const [file, setFile] = useState(null);
     const [cat, setCat] = useState(state?.cat || '');
+    const navigate = useNavigate();
 
 
     const upload = async () => {
@@ -28,7 +29,7 @@ const Write = () => {
     const handleClick = async e => {
         e.preventDefault();
         // adding the img url to our database
-        const imgUrl = upload();
+        const imgUrl = await upload();
 
         try {
             // if there is a state, it means it's an update page
@@ -37,7 +38,7 @@ const Write = () => {
             }) : await axios.post(`/posts/`, {
                 title, desc: value, cat, img: file ? imgUrl : "", date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss")
             });
-
+            navigate("/");
 
         } catch (err) {
 
